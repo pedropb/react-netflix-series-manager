@@ -4,19 +4,19 @@
       "id": 1,
       "name": "How I met your mother",
       "status": "watched",
-      "genre": "Comédia",
-      "comments": "Muito bom"
+      "genre": "Comedy",
+      "comments": "Very good"
     },
     {
       "id": 2,
       "name": "Friends",
       "status": "watching",
-      "genre": "Comédia",
+      "genre": "Comedy",
       "current":{
         "episode": "01",
         "season": "09"
       },
-      "comments": "Bom para descontrair"
+      "comments": "Funny"
     },
     {
       "id": 3,
@@ -30,10 +30,10 @@
       "name": "Better Call Saul",
       "status": "toWatch",
       "genre": "Drama",
-      "comments": "Galera fala bem"
+      "comments": "Everyone is talking about this"
     }
   ],
   "genres":[
-    "Comédia", "Drama", "Ação"
+    "Comedy", "Drama", "Action"
   ]
 }
