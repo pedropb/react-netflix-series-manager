@@ -10,3 +10,11 @@ it('loads genres', () => {
 
     return Api.loadGenres().then(response => expect(response.data).toEqual(resp));
 });
+
+it('load series', () => {
+    expect.assertions(1);
+    const resp = {"series":[{success: true}]};
+    mock.onGet('/genres').reply(200, resp);
+
+    return Api.loadGenres().then(response => expect(response.data).toEqual(resp));
+});
