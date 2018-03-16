@@ -3,7 +3,7 @@ import Api from './Api'
 
 class App extends Component {
   componentDidMount() {
-    Api.loadGenres().then((res) => console.log(res))
+    // Api.loadGenres().then((res) => console.log(res))
   }
 
   render() {
