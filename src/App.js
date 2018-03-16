@@ -2,8 +2,21 @@ import React, { Component } from 'react'
 import Api from './Api'
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isLoading: true,
+      genres: []
+    }
+  }
+
   componentDidMount() {
-    // Api.loadGenres().then((res) => console.log(res))
+    Api.loadGenres().then((response) => {
+      this.setState({
+        isLoading: false,
+        genres: response.data
+      })
+    });
   }
 
   render() {
@@ -37,6 +50,21 @@ class App extends Component {
                 <p>Keep track of all series you have watched or want to watch in the future.</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section>
+          <div>
+            { 
+              this.state.isLoading &&
+              <span>Aguarde carregando...</span>
+            }
+            {
+              !this.state.isLoading &&
+              <div>
+                Ver séries do gênero {JSON.stringify(this.state.genres)}
+              </div>
+            }
           </div>
         </section>
       </div>
